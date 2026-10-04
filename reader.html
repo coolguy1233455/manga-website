@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reader | MangaVerse</title>
+    <meta
+      name="description"
+      content="Read manga chapters in a clean, full-screen reader interface."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="reader-body">
+    <header class="site-header reader-header">
+      <div class="container navbar">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">M</span>
+          <span>MangaVerse</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#popular">Popular</a>
+          <a href="index.html#latest">Latest</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-ghost">Bookmark</button>
+          <button class="btn btn-primary">Continue</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="reader-page">
+      <div class="container reader-layout">
+        <aside class="reader-sidebar">
+          <div class="sidebar-card">
+            <div id="mangaSidebarCover" class="sidebar-cover"></div>
+            <div class="sidebar-info">
+              <span class="eyebrow">Currently reading</span>
+              <h2 id="readerTitle">Loading...</h2>
+              <p id="readerAuthor">Author</p>
+            </div>
+          </div>
+
+          <div class="chapter-panel">
+            <div class="panel-header">
+              <h3>Chapters</h3>
+              <span id="chapterCount">0</span>
+            </div>
+            <div id="chapterList" class="chapter-list"></div>
+          </div>
+        </aside>
+
+        <section class="reader-panel">
+          <div class="reader-topbar">
+            <div>
+              <p class="eyebrow">Chapter</p>
+              <h1 id="chapterHeading">Loading chapter...</h1>
+            </div>
+            <div class="reader-actions">
+              <button class="btn btn-secondary" id="prevChapterBtn">Previous</button>
+              <button class="btn btn-primary" id="nextChapterBtn">Next</button>
+            </div>
+          </div>
+
+          <div class="reader-content" id="readerPages"></div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
